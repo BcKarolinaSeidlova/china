@@ -11,15 +11,19 @@ const animal = [
   'hada',
   'koně',
   'kozy',
-]; // Try edit me
-var year = 1960; //document.getElementById("year").value;
-var mod = year % 12;
-const element = ['kov', 'voda', 'dřevo', 'oheň', 'zem'];
+]; 
 
-var result = year + ' je ve znamení ' + animal[mod];
+const element = ['kovu', 'kovu', 'vody','vody', 'dřeva', 'dřeva' , 'ohně', 'ohně', 'země', 'země'];
 
-// Update header text
-document.querySelector('#header').innerHTML = result;
+// Try edit me
+document.getElementById("try").addEventListener("click", function year () {
+                   var year = document.getElementById("year").value;    
+var mod = year%12;
+var e = year%10;
+  
+if (isNaN(year) == false ) {
+  var result = "Rok "+year+" je ve znamení "+animal[mod]+" s živlem "+element[e];
+  document.getElementById("result").innerHTML = result} 
+else {
+  document.getElementById("result").innerHTML = "Zadejte rok v číselnem formátu."}});
 
-// Log to console
-console.log(year, animal[mod]);
