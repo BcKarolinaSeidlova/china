@@ -21,9 +21,8 @@ document.getElementById("try").addEventListener("click", function year () {
 var mod = year%12;
 var e = year%10;
   
-if (isNaN(year) == false ) {
-  var result = "Rok "+year+" je ve znamení "+animal[mod]+" s živlem "+element[e];
-  document.getElementById("result").innerHTML = result} 
+if (isNaN(year) == true || year === "") {
+  document.getElementById("result").innerHTML = "Zadejte rok v číselnem formátu."} 
 else {
-  document.getElementById("result").innerHTML = "Zadejte rok v číselnem formátu."}});
-
+  var result = "Rok "+year+" je ve znamení "+animal[mod]+" s živlem "+element[e];
+  document.getElementById("result").innerHTML = result} });
